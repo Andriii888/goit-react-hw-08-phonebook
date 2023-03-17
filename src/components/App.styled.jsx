@@ -1,14 +1,18 @@
 import styled from '@emotion/styled';
 
-export const Appstyle = styled.div`
+export const Appstyle = styled.section`
+text-align:center;
+margin-left:auto;
   padding: 0 20px;
-  background-color: rgb(0, 128, 128);
+  background-color: rgb(161, 188, 141);
   h1,
   h2,
   h3,
   p {
     margin-top: 0;
     margin-bottom: 0;
+    padding-top:10px;
+    padding-bottom:10px;
   }
   button {
     display: block;

@@ -1,6 +1,6 @@
-
+import { Heading } from '@chakra-ui/react'
 export default function HomeView(){
     return (<>
-   {<div><h1>Welcome to your PhoneBook</h1></div>}
+   {<div><Heading as='h1' size='4xl' noOfLines={2}>Welcome to your PhoneBook</Heading></div>}
     </>)
 }

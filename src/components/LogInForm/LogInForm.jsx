@@ -1,5 +1,7 @@
 import { useDispatch } from 'react-redux';
 import { logIn } from 'redux/auth/operations';
+import { Button } from "@chakra-ui/react";
+import { Input } from '@chakra-ui/react'
 
 export const LogInForm = () => {
   const dispatch = useDispatch();
@@ -15,18 +17,18 @@ export const LogInForm = () => {
     );
     form.reset();
   };
-
+  const style={width:'250px'}
   return (
-    <form onSubmit={handleSubmit} autoComplete="off">
+    <form onSubmit={handleSubmit} autoComplete="off" style={style}>
       <label>
         Email
-        <input type="email" name="email" />
+        <Input variant='filled' placeholder='Filled' type="email" name="email" />
       </label>
       <label>
         Password
-        <input type="password" name="password" />
+        <Input variant='filled' placeholder='Filled' type="password" name="password" />
       </label>
-      <button type="submit">Log In</button>
+      <Button type="submit">Log In</Button>
     </form>
   );
 };

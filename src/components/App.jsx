@@ -6,7 +6,8 @@ import { useDispatch } from 'react-redux';
 import { useAuth } from 'hooks/useAuth';
 import { PrivateRoute } from './PrivateRoute';
 import { RestrictedRoute } from './RestrictedRoute';
-// import { ChakraProvider } from '@chakra-ui/react'
+import {Appstyle} from './App.styled'
+
 
 
 
@@ -27,7 +28,7 @@ export function App() {
   return isRefreshing ? (
     <b>Refreshing user...</b>
   ) : (
-    <>
+    <Appstyle>
       <Routes>
         <Route path="/" element={<Layout />}>
           <Route index element={<HomeView />} />
@@ -52,6 +53,6 @@ export function App() {
       </Routes>
 
      
-    </>
+    </Appstyle>
   );
 }

@@ -3,6 +3,8 @@ import { logOut } from 'redux/auth/operations';
 import { useAuth } from 'hooks/useAuth';
 import { UserMenuStyle } from '../UserMenu/UserMenuStyle.styled';
 
+
+
 export const UserMenu = () => {
   const dispatch = useDispatch();
   const { user } = useAuth();

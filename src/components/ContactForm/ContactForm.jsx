@@ -1,7 +1,9 @@
 import { useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
-
+import { Input } from '@chakra-ui/react'
 import { addContact } from '../../redux/operations';
+import { Button } from "@chakra-ui/react";
+
 
 export function ContactForm() {
   const dispatch = useDispatch();
@@ -38,13 +40,14 @@ export function ContactForm() {
     setName('');
     setNumber('');
   };
-
+const style={width:'250px'}
   return (
     <>
-      <form onSubmit={handleSubmit}>
+      <form onSubmit={handleSubmit} style={style}>
         <h2>Name</h2>
         <label htmlFor="name">
-          <input
+          <Input
+          variant='filled' placeholder='Filled'
             onChange={handleInputChange}
             type="text"
             name="name"
@@ -56,7 +59,8 @@ export function ContactForm() {
         </label>
         <h2>Number</h2>
         <label htmlFor="number">
-          <input
+          <Input
+          variant='filled' placeholder='Filled'
             onChange={handleInputChange}
             type="tel"
             name="number"
@@ -66,9 +70,9 @@ export function ContactForm() {
             required
           />
         </label>
-        <button type="submit" onSubmit={handleSubmit}>
+        <Button type="submit" onSubmit={handleSubmit}>
           Add contact
-        </button>
+        </Button>
       </form>
       {done && <h1>This contact {name} already done</h1>}
     </>

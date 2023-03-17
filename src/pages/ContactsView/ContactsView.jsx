@@ -4,6 +4,8 @@ import { ContactForm } from '../../components/ContactForm/ContactForm';
 import { fetchContacts } from 'redux/operations';
 import { FilterByName } from '../../components/Filter/Filter';
 import { ContactList } from '../../components/ContactList/ContactList';
+import { Heading } from '@chakra-ui/react';
+
 
 export default function ContactsView() {
   const dispatch = useDispatch();
@@ -12,7 +14,7 @@ export default function ContactsView() {
   }, [dispatch]);
   return (
     <>
-      <h1>PhoneBook</h1>
+      <Heading as='h1' size='4xl' noOfLines={1}>PhoneBook</Heading>
       <ContactForm />
       <h2>Contacts</h2>
       <FilterByName />

@@ -1,13 +1,12 @@
 import React, { lazy,useEffect } from 'react';
-// import { Appstyle } from './App.styled';
 import { Route, Routes } from 'react-router-dom';
-// import { useSelector } from 'react-redux';
 import { Layout } from './Layout';
 import { refreshUser } from 'redux/auth/operations';
 import { useDispatch } from 'react-redux';
 import { useAuth } from 'hooks/useAuth';
 import { PrivateRoute } from './PrivateRoute';
 import { RestrictedRoute } from './RestrictedRoute';
+// import { ChakraProvider } from '@chakra-ui/react'
 
 
 
